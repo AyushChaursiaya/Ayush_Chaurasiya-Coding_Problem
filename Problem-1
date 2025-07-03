@@ -1,1 +1,47 @@
+/**************************************************************************************************************************************
+Problem-1: Create a small calculator which performs operations such as Addition, Subtraction, Multiplication and Division using class. 
+***************************************************************************************************************************************/
 
+solution →
+            class Calculator {
+              constructor(a, b, operation) {
+                this.a = a;
+                this.b = b;
+                this.operation = operation;
+              }
+
+              calculate() {
+                if (this.operation === "add") {
+                  return this.a + this.b;
+                } else if (this.operation === "sub") {
+                  return this.a - this.b;
+                } else if (this.operation === "mult") {
+                  return this.a * this.b;
+                } else if (this.operation === "div") {
+                  if (this.b !== 0) {
+                    return this.a / this.b;
+                  } else {
+                    return "Division by zero";
+                  }
+                } else {
+                  return "Invalid operation";
+                }
+              }
+            }
+            
+            // Example usage:
+            let addCalc = new Calculator(10.5, 2.5, "add");
+            console.log("Addition:", addCalc.calculate()); // 13
+            
+            let subCalc = new Calculator(10.5, 2.5, "sub");
+            console.log("Subtraction:", subCalc.calculate()); // 8
+            
+            let mulCalc = new Calculator(10.5, 2.5, "mult");
+            console.log("Multiplication:", mulCalc.calculate()); // 26.25
+            
+            let divCalc = new Calculator(10.5, 2.5, "div");
+            console.log("Division:", divCalc.calculate()); // 4.2
+            
+            let divZeroCalc = new Calculator(10.5, 0, "div");
+            console.log("Division by zero:", divZeroCalc.calculate()); // Division by zero
+           
