@@ -1,8 +1,9 @@
 /**************************************************************************************************************************************
 Problem-1: Create a small calculator which performs operations such as Addition, Subtraction, Multiplication and Division using class. 
 ***************************************************************************************************************************************/
-
+__________
 solution →
+----------
             class Calculator {
               constructor(a, b, operation) {
                 this.a = a;
@@ -21,7 +22,7 @@ solution →
                   if (this.b !== 0) {
                     return this.a / this.b;
                   } else {
-                    return "Division by zero";
+                    return "Error: Division by zero";
                   }
                 } else {
                   return "Invalid operation";
@@ -43,5 +44,5 @@ solution →
             console.log("Division:", divCalc.calculate()); // 4.2
             
             let divZeroCalc = new Calculator(10.5, 0, "div");
-            console.log("Division by zero:", divZeroCalc.calculate()); // Division by zero
+            console.log("Division by zero:", divZeroCalc.calculate()); //Error: Division by zero
            
